@@ -60,48 +60,43 @@ else:
 #Front Row Table
 
 if 'frow' not in tbs:
- print('\n A Table is missing. \n', '〰️'*13)
- print('Creating Table...')
- cur.execute('create table frow(naam varchar(15), phno bigint(11), tic int(2), fnam 
-varchar(20), lnam varchar(20), pswd varchar(20), usrid varchar(10));')
- cur.execute("Show tables")
- tbs = []
- for x in cur:
- tbs += x
- if 'frow' not in tbs:
- print('unable to create table...')
- else:
- print('Table Created!')
+    print('\n A Table is missing. \n', '〰️'*13)
+    print('Creating Table...')
+    cur.execute('create table frow(naam varchar(15), phno bigint(11), tic int(2), fnam varchar(20), lnam varchar(20), pswd varchar(20), usrid varchar(10));')
+    cur.execute("Show tables")
+    tbs = []
+    for x in cur:
+        tbs += x
+    if 'frow' not in tbs:
+        print('unable to create table...')
+    else:
+        print('Table Created!')
 else:
- print("table found...")
+print("table found...")
+
+
+#Upper Row Table
+
 if 'upcb' not in tbs:
- print('\n A Table is missing. \n', '〰️'*13)
- print('Creating Table...')
- cur.execute('create table upcb(naam varchar(15), phno bigint(11), tic int(2), 
-fnam varchar(20), pswd varchar(20), usrid varchar(10));')
- cur.execute("Show tables")
- tbs = []
- for x in cur:
- tbs += x
- if 'upcb' not in tbs:
- print('unable to create table...')
- else:
- print('Table Created!')
+    print('\n A Table is missing. \n', '〰️'*13)
+    print('Creating Table...')
+    cur.execute('create table upcb(naam varchar(15), phno bigint(11), tic int(2),fnam varchar(20), pswd varchar(20), usrid varchar(10));')
+    cur.execute("Show tables")
+    tbs = []
+    for x in cur:
+        tbs += x
+    if 'upcb' not in tbs:
+       print('unable to create table...')
+    else:
+        print('Table Created!')
 else:
- print("table found...")
+    print("table found...")
+
+
+#PRINTING STARTS
+
+
 print('''
-░█████╗░
-██╔══██╗
-███████║
-██╔══██║
-██║░░██║ditya Gautam
-╚═╝░░╚═╝
-██████╗░
-██╔══██╗
-██████╔╝
-██╔══██╗
-██║░░██║ajneesh Kumar
-╚═╝░░╚═╝
 ██╗░░░██╗
 ╚██╗░██╔╝
 ░╚████╔╝░
