@@ -210,8 +210,7 @@ def delt():
         mnu()
     else:
         print('Invalid Input\n')
- 
-mnu()
+        mnu()
     cur.execute("delete from {t} where usrid=\'{e}\' and pswd=\'{l}\'".format(t=t, e=e, l=l))
     db.commit()
     mnu()
