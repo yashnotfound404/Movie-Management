@@ -1,9 +1,9 @@
-import mysql.connector as sql
+import mysql.connector as sql1
 import random
 from getpass import getpass
 a = input("Database User: ")
 b = getpass("Enter Database password: ")
-db = sql.connect(host='localhost', user=a,passwd=b)
+db = sql1.connect(host='localhost', user=a,passwd=b)
 cur = db.cursor()
 cur.execute("Show Databases")
 dbs = []
@@ -130,7 +130,7 @@ def sup():
         usrid = iddd
     else:
         print("User ID is: ", usrid)
-    v_ins = "insert into movie values( '{}','{}','{}','{}','{}','{}','{}')".format(naam, phno, tic, fnam, lnam, pswd, usrid)
+    v_ins = "insert into movie values( '{}','{}','{}','{}','{}','{}','{}');".format(naam, phno, tic, fnam, lnam, pswd, usrid)
     cur.execute(v_ins)
     db.commit()
     print(" General Ticket Booked \n\n")
